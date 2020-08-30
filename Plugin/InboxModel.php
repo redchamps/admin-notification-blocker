@@ -18,7 +18,7 @@ class InboxModel
         $this->scopeConfig = $scopeConfig;
     }
 
-    public function aroundParse(Inbox $subject, callable $proceed, array $data)
+    public function beforeParse(Inbox $subject, array $data)
     {
         $blockedSeverities = $this->getBlockedSeverities();
         foreach ($data as $index => $item) {
@@ -26,7 +26,7 @@ class InboxModel
                 unset($data[$index]);
             }
         }
-        return $proceed($data);
+        return [$data];
     }
 
     protected function getBlockedSeverities()
