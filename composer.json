@@ -1,0 +1,54 @@
+{
+    "name": "redchamps/module-admin-notification-blocker",
+    "description": "This Magento 2 module will block admin notifications.",
+    "type": "magento2-module",
+    "keywords": [
+        "php",
+        "magento",
+        "magento2",
+        "admin",
+        "notification"
+    ],
+    "homepage": "https://redchamps.com/admin-notification-blocker-magento-2-extension.html",
+    "readme": "README.md",
+    "license": [
+        "OSL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "RedChamps",
+            "email": "hello@redchamps.com",
+            "homepage": "https://redchamps.com/",
+            "role": "maintainer"
+        },
+        {
+            "name": "Ravinder",
+            "email": "rav@redchamps.com",
+            "homepage": "https://twitter.com/_iamRav",
+            "role": "maintainer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/redchamps/admin-notification-blocker/",
+        "issues": "https://github.com/redchamps/admin-notification-blocker/issues/"
+    },
+    "require": {
+        "magento/framework": "*",
+        "magento/module-backend": "*",
+        "magento/module-admin-notification": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "RedChamps\\AdminNotificationBlocker\\": ""
+        }
+    }
+}

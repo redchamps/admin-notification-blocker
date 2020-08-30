@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="redchamps" translate="label" sortOrder="999998">
+            <label>RedChamps</label>
+        </tab>
+        <section id="admin_notification_blocker" showInDefault="1" showInWebsite="1" showInStore="1" translate="label">
+            <label>Admin Notification Blocker</label>
+            <tab>redchamps</tab>
+            <resource>RedChamps_AdminNotificationBlocker::config</resource>
+            <group id="settings" type="text" sortOrder="0" showInDefault="1" showInWebsite="0" showInStore="0" translate="label">
+                <label>General</label>
+                <field id="blocked_severities" type="multiselect" translate="label comment"  sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Blocked Severities</label>
+                    <source_model>RedChamps\AdminNotificationBlocker\Model\System\Config\Source\Severities</source_model>
+                    <comment>Select type of notifications you would like to block.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
